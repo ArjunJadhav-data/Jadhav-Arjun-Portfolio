@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <title>Arjun Jadhav|Data Analyst</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>📊</text></svg>">
+
+    <script>
+      const titles = [
+        "Arjun Jadhav |Data Analyst",
+        "Arjun Jadhav |MIS Specialist",
+        "Arjun Jadhav |Cloud Analyst",
+        "Arjun Jadhav |BI Insights"
+      ];
+      
+      let i = 0;
+      // Change title every 3 seconds
+      setInterval(() => {
+        document.title = titles[i];
+        i = (i + 1) % titles.length;
+      }, 3000);
+
+      // Extra "Catchy" feature: Change title when user leaves the tab
+      window.addEventListener("blur", () => {
+        document.title = "📉 Don't miss the insights!";
+      });
+
+      // Restore rotating titles when user returns
+      window.addEventListener("focus", () => {
+        document.title = titles[i];
+      });
+    </script>
+</head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <span class="loader-text">AJ</span>
+    </div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#home" class="logo">ARJUN<span>JADHAV</span></a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+              <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+          </li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Resume Modal-->
+
+   <div class="modal" id="resumeModal">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="closeResumeModal"><i class="fas fa-times"></i></button>
+      <div class="resume-preview">
+ 
+        <!-- HEADER -->
+        <div class="resume-header">
+          <h2>Jadhav Arjun</h2>
+          <p class="resume-role">DATA ANALYST &amp; DATA ANALYST AND CLOUD ANALYST</p>
+          <div class="resume-contact-row">
+            <span><i class="fas fa-envelope"></i> jadhavarjun9545@gmail.com</span>
+            <span><i class="fas fa-phone"></i> +91 7499487089</span>
+            <span><i class="fas fa-map-marker-alt"></i> mumbai / Pune 411046</span>
+            <span><i class="fab fa-github"></i> <a href="https://github.com/ArjunJadhav-data" target="_blank">Arjun Jadhav</a></span>
+            <span><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/jadhavarjun21/" target="_blank">Arjun-Jadhav</a></span>
+          </div>
+        </div>
+ 
+        <div class="resume-body">
+ 
+          <!-- SUMMARY -->
+          <div class="resume-section">
+            <h3><span class="rs-icon"><i class="fas fa-user"></i></span>Professional Summary</h3>
+            <p>Detail-oriented Data Analyst with hands-on experience in SQL, Python (Pandas, NumPy), and data visualization tools like Power BI and Tableau. Skilled in data cleaning, transformation, and building interactive dashboards to generate actionable business insights. Experienced in working with large datasets, MIS reporting, and AWS services such as S3, Glue, and Athena. Strong problem-solving ability with a focus on improving business performance through data-driven decision making.
+</p>
+          </div>
+ 
+          <!-- SKILLS -->
+          <div class="resume-section">
+            <h3><span class="rs-icon"><i class="fas fa-tools"></i></span>Technical Skills</h3>
+            <div class="resume-skills-grid">
+             <div class="rs-item"><strong>Languages:</strong> Python, SQL</div>
+
+<div class="rs-item"><strong>Data Analysis:</strong> Pandas, NumPy, Data Cleaning, Data Transformation</div>
+
+<div class="rs-item"><strong>Data Visualization:</strong> Power BI, Tableau, Matplotlib, Seaborn</div>
+
+<div class="rs-item"><strong>Databases:</strong> MySQL, PostgreSQL, Amazon Redshift</div>
+
+<div class="rs-item"><strong>Cloud & AWS:</strong> Amazon S3, AWS Glue (Crawler, Data Catalog), Athena</div>
+
+<div class="rs-item"><strong>Big Data (Basic):</strong> PySpark</div>
+
+<div class="rs-item"><strong>Tools:</strong> Excel (Advanced), Git, GitHub, Jupyter Notebook, VS Code</div>
+            </div>
+          </div>
+ 
+         <!-- EXPERIENCE -->
+<div class="resume-section">
+  <h3><span class="rs-icon"><i class="fas fa-briefcase"></i></span>Work Experience</h3>
+
+  <div class="resume-exp-item">
+    <div class="rei-header">
+      <h4>MIS Executive</h4>
+      <span class="rei-date">Mar 2026 – Present</span>
+    </div>
+    <p class="rei-company">PP Consumer Pvt. Ltd.</p>
+    <p>
+      Managed and analyzed business data using Excel and SQL to generate daily and monthly MIS reports. 
+      Created dashboards to track sales performance, targets, and KPIs, enabling data-driven decision making. 
+      Performed data cleaning, validation, and transformation to ensure accuracy and consistency in reporting.
+    </p>
+  </div>
+
+  <div class="resume-exp-item">
+    <div class="rei-header">
+      <h4>MIS Executive</h4>
+      <span class="rei-date">Apr 2025 – Sep 2025</span>
+    </div>
+    <p class="rei-company">Rajyog Toyota</p>
+    <p>
+      Developed and maintained MIS reports for sales and operations using advanced Excel. 
+      Analyzed large datasets to identify trends and improve reporting efficiency. 
+      Collaborated with business teams to provide actionable insights and support decision-making.
+    </p>
+  </div>
+
+  <div class="resume-exp-item">
+    <div class="rei-header">
+      <h4>Data Analyst Intern</h4>
+      <span class="rei-date">Oct 2025 – Jan 2026</span>
+    </div>
+    <p class="rei-company">ExcelR Solutions</p>
+    <p>
+      Performed data cleaning and analysis using Python (Pandas, NumPy) and SQL. 
+      Built interactive dashboards in Power BI and Tableau to visualize business insights. 
+      Worked on real-world datasets to extract meaningful patterns and support analytical reporting.
+    </p>
+  </div>
+
+</div>
+ 
+        <div class="resume-section">
+            <h3><span class="rs-icon"><i class="fas fa-rocket"></i></span>Projects</h3>
+
+            <p class="resume-projects-subtitle"><i class="fas fa-database"></i> Data Engineering</p>
+
+            <div class="resume-exp-item">
+              <div class="rei-header">
+                <h4>AWS ETL Data Pipeline</h4>
+                <a href="https://github.com/AadeRaviraj" target="_blank" class="rei-gh"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+              <p>Designed and built an end-to-end ETL pipeline to ingest, transform, and load raw data into Amazon Redshift. Used Glue for automated schema crawling, Athena for validation, and orchestrated the workflow with Step Functions.<br>
+              <strong>Stack:</strong> Python, AWS S3, Glue, Redshift, Athena, Step Functions</p>
+            </div>
+
+            <p class="resume-projects-subtitle"><i class="fas fa-chart-line"></i> Data Analytics</p>
+
+            <div class="resume-exp-item">
+              <div class="rei-header">
+                <h4>Superstore Sales Analysis Dashboard</h4>
+                <a href="https://github.com/AadeRaviraj" target="_blank" class="rei-gh"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+              <p>Analyzed 50,000+ records using SQL CTEs and window functions to identify top revenue drivers (65% of sales). Built interactive Tableau dashboards for regional performance and improved query efficiency via indexing.<br>
+              <strong>Stack:</strong> SQL, MySQL, Tableau</p>
+            </div>
+
+            <div class="resume-exp-item">
+              <div class="rei-header">
+                <h4>Zomato Restaurant Data Analysis</h4>
+                <a href="https://github.com/AadeRaviraj" target="_blank" class="rei-gh"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+              <p>Analyzed 5,000+ restaurant records to identify pricing and rating trends. Resolved 15+ data quality issues during ETL and developed dynamic Power BI dashboards for location-based business insights.<br>
+              <strong>Stack:</strong> Excel, Power BI, Power Query</p>
+            </div>
+
+          </div>
+          <!-- EDUCATION -->
+          <div class="resume-section">
+            <h3><span class="rs-icon"><i class="fas fa-graduation-cap"></i></span>Education</h3>
+            <div class="resume-exp-item">
+              <div class="rei-header">
+                <h4>Master of Computer Applications (MBA Pursing)</h4>
+                <span class="rei-date">2026 – 2028</span>
+              </div>
+              <p class="rei-company">Savitribai Phule Pune University</p>
+            </div>
+            <div class="resume-exp-item">
+              <div class="rei-header">
+                <h4>Bachelor of Computer Applications (BCA)</h4>
+                <span class="rei-date">2020 – 2023</span>
+              </div>
+              <p class="rei-company">Swami Ramanand Teerth Marathwada University</p>
+            </div>
+            <div class="resume-exp-item">
+              <div class="rei-header">
+                <h4>HSC</h4>
+                <span class="rei-date">2019 – 2020</span>
+              </div>
+              <p class="rei-company"> Maharashtra State Board of Secondary and Higher Secondary Education</p>
+            </div>
+          </div>
+ 
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn" id="downloadResumeBtn"><i class="fas fa-download"></i> Download PDF</button>
+        <button class="btn btn-outline" id="closeResumePreviewBtn"><i class="fas fa-times"></i> Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section id="home" class="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge fade-up">
+            <span class="badge-dot"></span>
+            Available for Work
+          </div>
+          <h1 class="hero-title fade-up">
+            Data<br>
+            Analyst &<br>
+            <span class="gradient-text">Business Analyst</span>
+          </h1>
+          <p class="hero-desc fade-up">
+            Turning raw data into actionable insights that drive business decisions.
+Uncovering patterns and trends through data analysis and visualization.
+Designing clean dashboards for clear and impactful data storytelling..
+          </p>
+          <div class="hero-btns fade-up">
+            <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i> Contact Me</a>
+            <button class="btn btn-outline" id="downloadCVBtn"><i class="fas fa-download"></i> Download CV</button>
+          </div>
+          <div class="hero-socials fade-up">
+            <a href="https://github.com/AadeRaviraj" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/raviraj-aade/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:raviraj.s.aade@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="hero-visual fade-up">
+          <div class="code-window">
+            <div class="cw-header">
+              <div class="cw-dot red"></div>
+              <div class="cw-dot yellow"></div>
+              <div class="cw-dot green"></div>
+              <span class="cw-title">portfolio.js</span>
+            </div>
+            <div class="cw-body">
+              <div class="cw-line"><span class="ln">1</span><span class="kw">const</span> Analyst = {</div>
+              <div class="cw-line"><span class="ln">2</span>&nbsp;&nbsp;name: <span class="str">"Arjun Jadhav"</span>,</div>
+              <div class="cw-line"><span class="ln">3</span>&nbsp;&nbsp;role: <span class="str">"Data Analyst"</span>,</div>
+              <div class="cw-line"><span class="ln">4</span>&nbsp;&nbsp;skills: [<span class="str">"Python"</span>, <span class="str">"SQL"</span>, <span class="str">"Data Visualization"</span>],</div>
+              <div class="cw-line"><span class="ln">5</span>&nbsp;&nbsp;passion: <span class="str">"Cloud + ERP"</span></div>
+              <div class="cw-line"><span class="ln">6</span>};</div>
+              <div class="cw-line"><span class="ln">7</span></div>
+              <div class="cw-line"><span class="ln">8</span><span class="cm">// Let's Build Some Interesting </span></div>
+              <div class="cw-line"><span class="ln">9</span><span class="fn">connect</span>(Analysis);<span class="cursor-blink">|</span></div>
+            </div>
+          </div>
+          <div class="hero-orb orb-1"></div>
+          <div class="hero-orb orb-2"></div>
+          <div class="hero-orb orb-3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="about reveal-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>About Me</h2>
+    </div>
+    <div class="about-content">
+      <div class="about-image-wrap reveal-left">
+        <div class="about-img-frame">
+          <img src="PROFILE PHOTO.png" alt="Arjun Jadhav" class="profile-img">
+          <div class="img-decoration"></div>
+        </div>
+        <div class="about-quick-stats">
+          <div class="qs-item"><span class="qs-num">1+</span><span class="qs-label">Years Exp.</span></div>
+          <div class="qs-item"><span class="qs-num">5+</span><span class="qs-label">Data Projects</span></div>
+        </div>
+      </div>
+      <div class="about-text reveal-right">
+        <h3>Mr. Arjun Jadhav</h3>
+        <div class="about-role-tags">
+          <span>Data Analyst</span>
+          <span>MIS Specialist</span>
+          <span>Cloud Data Analyst</span>
+          <span>Business Intelligence</span>
+        </div>
+        <p>A detail-oriented <strong>Data Analyst</strong> with a passion for turning raw, complex data into actionable business insights. Expert in <strong>SQL</strong>, <strong>Python (Pandas, NumPy)</strong>, and <strong>Advanced Excel</strong>, I specialize in architecting data cleaning pipelines and interactive visualizations that drive executive decision-making.</p>
+        
+        <p>Currently serving as an <strong>MIS Executive</strong> at PP Consumer Pvt. Ltd., I manage large-scale sales datasets and automate performance tracking using <strong>Power BI</strong> and <strong>Power Query</strong>. My technical toolkit extends to the cloud, where I leverage <strong>AWS (S3, Glue, Athena)</strong> to build and monitor end-to-end ETL workflows.</p>
+        
+        <p>I thrive on uncovering hidden trends and optimizing query performance to deliver measurable value. My goal is to help organizations bridge the gap between raw information and strategic growth through data storytelling.</p>
+        
+        <div class="about-cta">
+          <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+          <button class="btn btn-outline" id="aboutDownloadCV"><i class="fas fa-download"></i> Download CV</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- ========== EXPERIENCE ========== -->
+  <section id="experience" class="experience reveal-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Experience & Education</h2>
+    </div>
+    <div class="exp-tabs">
+      <div class="tab-nav">
+        <button class="tab-btn active" data-tab="experience-tab"><i class="fas fa-chart-line"></i> Experience</button>
+        <button class="tab-btn" data-tab="education-tab"><i class="fas fa-graduation-cap"></i> Education</button>
+      </div>
+      
+      <div class="tab-pane active" id="experience-tab">
+        <div class="timeline">
+          
+          <div class="tl-item reveal-up">
+            <div class="tl-dot"><i class="fas fa-user-tie"></i></div>
+            <div class="tl-card">
+              <div class="tl-meta">
+                <span class="tl-date"><i class="far fa-calendar-alt"></i> Mar 2026 – Present</span>
+                <span class="tl-badge">Current</span>
+              </div>
+              <h3>MIS Executive</h3>
+              <h4>PP Consumer Pvt. Ltd. — Mumbai, India</h4>
+              <p>Orchestrate automated <strong>Sales vs. Target</strong> dashboards using Power BI and advanced Excel to monitor regional performance. Streamline reporting workflows via <strong>Power Query</strong> and <strong>Pivot Tables</strong>, significantly reducing manual overhead while delivering high-impact KPI insights for executive decision-making.</p>
+              <div class="tech-stack-with-logos">
+                <div class="tech-logo-item"><img src="Logo/PowerBI.png" alt="Power BI"><span>Power BI</span></div>
+                <div class="tech-logo-item"><img src="Logo/Excel.png" alt="MS-Excel"><span>MS-Excel</span></div>
+                <div class="tech-logo-item"><img src="Logo/PowerQuery.png" alt="Power Query"><span>Power Query</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item reveal-up">
+            <div class="tl-dot"><i class="fas fa-database"></i></div>
+            <div class="tl-card">
+              <div class="tl-meta">
+                <span class="tl-date"><i class="far fa-calendar-alt"></i> Oct 2025 – Jan 2026</span>
+                <span class="tl-badge">Internship</span>
+              </div>
+              <h3>Data Analyst Intern</h3>
+              <h4>ExcelR Solutions — Remote</h4>
+              <p>Transformed raw business datasets into actionable insights using <strong>SQL</strong> and <strong>Power BI</strong>. Engineered optimized SQL queries (CTEs, Window Functions, Joins) which <strong>improved query runtime by 30%</strong>. Achieved 95% data quality by building robust cleaning pipelines to handle inconsistencies and missing values.</p>
+              <div class="tech-stack-with-logos">
+                <div class="tech-logo-item"><img src="Logo/excel.png" alt="MS-Excel"><span>MS-Excel</span></div>
+                <div class="tech-logo-item"><img src="Logo/PowerBi.png" alt="Power BI"><span>Power BI</span></div>
+                <div class="tech-logo-item"><img src="Logo/MySQL.png" alt="MySQL"><span>MySQL</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item reveal-up">
+            <div class="tl-dot"><i class="fas fa-car"></i></div>
+            <div class="tl-card">
+              <div class="tl-meta">
+                <span class="tl-date"><i class="far fa-calendar-alt"></i> Apr 2025 – Sep 2025</span>
+              </div>
+              <h3>MIS Executive</h3>
+              <h4>Rajyog Toyota — Latur, India</h4>
+              <p>Managed comprehensive MIS reporting for dealership operations, focusing on inventory turnover and sales trends. Maintained <strong>98% data accuracy</strong> across large operational datasets and utilized <strong>Advanced Excel</strong> to automate tracking of dealership-wide KPIs.</p>
+              <div class="tech-stack-with-logos">
+                <div class="tech-logo-item"><img src="Logo/excel.png" alt="MS-Excel"><span>MS-Excel</span></div>
+                <div class="tech-logo-item"><img src="Logo/powerQuery.png" alt="Validation"><span>Validation</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div> 
+      </div>
+
+      <div class="tab-pane" id="education-tab">
+        <div class="timeline">
+          <div class="tl-item reveal-up">
+            <div class="tl-dot"><i class="fas fa-graduation-cap"></i></div>
+            <div class="tl-card">
+              <div class="tl-meta">
+                <span class="tl-date"><i class="far fa-calendar-alt"></i> 2026 – 2028</span>
+              </div>
+              <h3>Master of Computer Applications (MBA Pursing)</h3>
+              <h4>Savitribai Phule Pune University</h4>
+            </div>
+          </div>
+          <div class="tl-item reveal-up">
+            <div class="tl-dot"><i class="fas fa-graduation-cap"></i></div>
+            <div class="tl-card">
+              <div class="tl-meta">
+                <span class="tl-date"><i class="far fa-calendar-alt"></i> 2020 – 2023</span>
+              </div>
+              <h3>Bachelor of Computer Applications (BCA)</h3>
+              <h4>Swami Ramanand Teerth Marathwada University</h4>
+            </div>
+          </div>
+          <div class="tl-item reveal-up">
+            <div class="tl-dot"><i class="fas fa-school"></i></div>
+            <div class="tl-card">
+              <div class="tl-meta">
+                <span class="tl-date"><i class="far fa-calendar-alt"></i> 2019 – 2020</span>
+              </div>
+              <h3>HSC</h3>
+              <h4> Maharashtra State Board of Secondary and Higher Secondary Education</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- ========== PROJECTS ========== -->
+<section id="projects" class="projects reveal-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>All GitHub Projects</h2>
+    </div>
+
+    <div class="proj-filter reveal-up">
+      <button class="pf-btn active" data-filter="all">All <span class="pf-count">5</span></button>
+      <button class="pf-btn" data-filter="de">Data Engineering <span class="pf-count">1</span></button>
+      <button class="pf-btn" data-filter="da">Data Analytics <span class="pf-count">4</span></button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+
+      <div class="project-card reveal-up" data-category="de">
+        <div class="pc-banner pc-banner-1">
+          <i class="fas fa-database"></i>
+          <div class="pc-banner-glow"></div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-tags">
+            <span class="pc-tag pc-tag-app">Data Engineering</span>
+            <span class="pc-tag">AWS</span>
+            <span class="pc-tag">ETL</span>
+            <span class="pc-tag">Cloud</span>
+          </div>
+          <h3>AWS ETL Data Pipeline</h3>
+          <p>Implemented an end-to-end <strong>ETL pipeline using AWS</strong> to process structured data. Configured <strong>IAM roles</strong>, <strong>S3 buckets</strong>, and <strong>AWS Glue Crawlers</strong> for metadata cataloging.</p>
+          <p>Queried data using <strong>AWS Athena</strong> and built real-time interactive dashboards in <strong>Power BI</strong>.</p>
+          <div class="tech-stack-with-logos">
+            <div class="tech-logo-item"><img src="Logo/python.png" alt="Python"><span>Python</span></div>
+            <div class="tech-logo-item"><img src="Logo/aws.png" alt="AWS"><span>AWS S3/Glue</span></div>
+          </div>
+          <div class="pc-links">
+            <a href="#" target="_blank" class="pc-link"><i class="fab fa-github"></i> Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal-up" data-category="da">
+        <div class="pc-banner" style="background: linear-gradient(45deg, #e50914, #000000);">
+          <i class="fas fa-play-circle"></i>
+          <div class="pc-banner-glow"></div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-tags">
+            <span class="pc-tag pc-tag-ml">Analytics</span>
+            <span class="pc-tag">SQL</span>
+            <span class="pc-tag">CTEs</span>
+            <span class="pc-tag">Cleaning</span>
+          </div>
+          <h3>Netflix Content Analysis</h3>
+          <p>Analyzed global library data using <strong>Advanced SQL (CTEs, Window Functions)</strong> to uncover distribution trends and regional contributions.</p>
+          <p>Performed <strong>string manipulation</strong> for keyword-based classification, segmenting content into audience suitability categories (Family/Adult).</p>
+          <div class="tech-stack-with-logos">
+            <div class="tech-logo-item"><img src="Logo/MySQL.png" alt="SQL"><span>MySQL</span></div>
+          </div>
+          <div class="pc-links">
+            <a href="#" target="_blank" class="pc-link"><i class="fab fa-github"></i> Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal-up" data-category="da">
+        <div class="pc-banner" style="background: linear-gradient(45deg, #217346, #123524);">
+          <i class="fas fa-file-excel"></i>
+          <div class="pc-banner-glow"></div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-tags">
+            <span class="pc-tag pc-tag-ml">Analytics</span>
+            <span class="pc-tag">Excel</span>
+            <span class="pc-tag">Power Query</span>
+            <span class="pc-tag">Modeling</span>
+          </div>
+          <h3>Interactive Sales Dashboard</h3>
+          <p>Developed an automated ETL solution using <strong>Power Query</strong> and a <strong>Star-Schema</strong> data model to track KPIs across multiple hierarchies.</p>
+          <p>Built a <strong>"one-click refresh"</strong> system with <strong>Dynamic Slicers</strong> to analyze regional profitability and logistics efficiency.</p>
+          <div class="tech-stack-with-logos">
+            <div class="tech-logo-item"><img src="Logo/excel.png" alt="Excel"><span>Power Query</span></div>
+          </div>
+          <div class="pc-links">
+            <a href="#" target="_blank" class="pc-link"><i class="fab fa-github"></i> Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal-up" data-category="da">
+        <div class="pc-banner pc-banner-ml-4">
+          <i class="fas fa-chart-bar"></i>
+          <div class="pc-banner-glow"></div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-tags">
+            <span class="pc-tag pc-tag-ml">Analytics</span>
+            <span class="pc-tag">Tableau</span>
+            <span class="pc-tag">SQL</span>
+          </div>
+          <h3>Superstore Sales Analysis</h3>
+          <p>Analyzed sales and profit trends using <strong>SQL joins and aggregations</strong>. Designed <strong>interactive Tableau dashboards</strong> to identify high-performing customer segments.</p>
+          <div class="tech-stack-with-logos">
+            <div class="tech-logo-item"><img src="Logo/MySQL.png" alt="SQL"><span>MySQL</span></div>
+            <div class="tech-logo-item"><img src="Logo/tableau.png" alt="Tableau"><span>Tableau</span></div>
+          </div>
+          <div class="pc-links">
+            <a href="https://github.com/ArjunJadhav-data/Superstore-Dashboad-dataset" target="_blank" class="pc-link"><i class="fab fa-github"></i> Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal-up" data-category="da">
+        <div class="pc-banner pc-banner-ml-5">
+          <i class="fas fa-utensils"></i>
+          <div class="pc-banner-glow"></div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-tags">
+            <span class="pc-tag pc-tag-ml">Analytics</span>
+            <span class="pc-tag">Power BI</span>
+            <span class="pc-tag">SQL</span>
+          </div>
+          <h3>Zomato Restaurant Analysis</h3>
+          <p>Cleaned real-world restaurant data to analyze pricing and ratings. Developed <strong>Power BI dashboards</strong> with city-wise performance and cuisine distribution filters.</p>
+          <div class="tech-stack-with-logos">
+            <div class="tech-logo-item"><img src="Logo/excel.png" alt="Excel"><span>Excel</span></div>
+            <div class="tech-logo-item"><img src="Logo/powerbi.png" alt="Power BI"><span>Power BI</span></div>
+          </div>
+          <div class="pc-links">
+            <a href="https://github.com/ArjunJadhav-data/Zomato-Restaurant-Dataset" target="_blank" class="pc-link"><i class="fab fa-github"></i> Source Code</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <br>
+    <div class="projects-footer reveal-up">
+      <a href="https://github.com/ArjunJadhav-data?tab=repositories" target="_blank" class="btn btn-outline">
+        <i class="fab fa-github"></i> View All on GitHub
+      </a>
+    </div>
+  </div>
+</section>
+  <!-- ========== SKILLS ========== -->
+  <section id="skills" class="skills reveal-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Technical Skills</h2>
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-category reveal-up">
+        <div class="sc-header">
+          <div class="sc-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3>Data Analytics</h3>
+        </div>
+        <div class="tech-stack-with-logos">
+          <div class="tech-logo-item"><img src="Logo/PowerBi.png" alt="Power BI"><span>Power BI</span></div>
+          <div class="tech-logo-item"><img src="Logo/Tableau.png" alt="Tableau"><span>Tableau</span></div>
+          <div class="tech-logo-item"><img src="Logo/Excel.png" alt="Excel"><span> MS-Excel</span></div>
+          <div class="tech-logo-item"><img src="Logo/python.png" alt="Python"><span>Python</span></div>
+          <div class="tech-logo-item"><img src="Logo/Jupyter.png" alt="Jupyter"><span>Jupyter</span></div>
+        </div>
+      </div>
+
+      <div class="skill-category reveal-up">
+        <div class="sc-header">
+          <div class="sc-icon"><i class="fas fa-cloud"></i></div>
+          <h3>Cloud & Databases</h3>
+        </div>
+        <div class="tech-stack-with-logos">
+          <div class="tech-logo-item"><img src="Logo/aws.png" alt="AWS"><span>AWS (S3/Glue)</span></div>
+          <div class="tech-logo-item"><img src="Logo/athena.png" alt="Athena"><span>Athena</span></div>
+          <!-- <div class="tech-logo-item"><img src="Logo/MySQL.png" alt="MySQL"><span>MySQL</span></div> -->
+          <div class="tech-logo-item"><img src="Logo/MySQL.png" alt="SQL"><span>SQL</span></div>
+          <div class="tech-logo-item"><img src="Logo/MongoDB.png" alt="MongoDB"><span>MongoDB</span></div>
+        </div>
+      </div>
+
+      <div class="skill-category reveal-up">
+        <div class="sc-header">
+          <div class="sc-icon"><i class="fas fa-tools"></i></div>
+          <h3>Tools & Workflow</h3>
+        </div>
+        <div class="tech-stack-with-logos">
+          <div class="tech-logo-item"><img src="Logo/Git.png" alt="Git"><span>Git</span></div>
+          <div class="tech-logo-item"><img src="Logo/github.png" alt="GitHub"><span>GitHub</span></div>
+          <div class="tech-logo-item"><img src="Logo/PowerQuery.png" alt="Power Query"><span>Power Query</span></div>
+          <div class="tech-logo-item"><img src="Logo/VS_Code.png" alt="VS Code"><span>VS Code</span></div>
+          <div class="tech-logo-item"><img src="Logo/agile.png" alt="Agile"><span>Agile</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="contact reveal-section">
+    <div class="container">
+      <div class="section-title">
+        <!-- <span class="section-tag">05 — Connect</span> -->
+        <h2>Get In Touch</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <p class="contact-intro">      
+  <p>
+    I’m currently open to new opportunities in <strong>Data Analytics, Business Intelligence, and Cloud Infrastructure</strong>. 
+  </p>
+  <p>
+    Whether you need to turn raw data into insights or optimize your cloud environment — my inbox is always open!
+  </p>
+
+            <div class="contact-items">
+            <div class="ci-item">
+              <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div><h4>Location</h4><p>Katraj, Pune, Maharashtra 411046</p></div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+              <div><h4>Email</h4><p>jadhavarjun9545@gmail.com</p></div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon"><i class="fas fa-phone"></i></div>
+              <div><h4>Phone</h4><p>+91 7499487089</p></div>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com/ArjunJadhav-data" target="_blank" class="cs-btn"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jadhavarjun21/" target="_blank" class="cs-btn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:jadhavarjun9545@gmail.com" class="cs-btn"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal-right">
+          <form id="contactForm" class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" name="name" class="form-control" placeholder="Arjun Jadhav" required>
+              </div>
+              <div class="form-group">
+                <label>Your Email</label>
+                <input type="email" name="email" class="form-control" placeholder="hello@email.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" name="subject" class="form-control" placeholder="Project Inquiry">
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea name="message" class="form-control" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-full"><i class="fas fa-paper-plane"></i> Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">Arjun<span>Jadhav</span></a>
+          <p>Creating digital experiences that make a difference. Passionate about clean code and innovative solutions.</p>
+          <div class="footer-socials">
+  <a href="https://github.com/ArjunJadhav-data" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://www.linkedin.com/in/jadhavarjun21/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  
+  <a href="jadhavarjun9545@gmail.com"><i class="fas fa-envelope"></i></a>
+</div>
+        </div>
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+  <h4>What I Do</h4>
+  <ul>
+    <li><a href="#projects">Data Analysis & Visualization</a></li>
+    <li><a href="#experience">MIS & Executive Reporting</a></li>
+    <li><a href="#projects">AWS ETL Data Pipelines</a></li>
+    <li><a href="#skills">SQL Query Optimization</a></li>
+    <li><a href="#skills">Power BI & Tableau Dashboards</a></li>
+    <li><a href="#experience">Business Intelligence Insights</a></li>
+  </ul>
+</div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Made with <span class="heart">♥</span>Arjun Jadhav</p>
+        <a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
