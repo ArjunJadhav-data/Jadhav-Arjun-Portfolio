@@ -258,7 +258,7 @@ if (contactForm) {
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
     btn.disabled = true;
 
-    fetch('https://formspree.io/f/xzzoddkd', {
+    fetch('https://formspree.io/f/mvzvjlqa', {
       method: 'POST',
       body: new FormData(this),
       headers: { 'Accept': 'application/json' }
