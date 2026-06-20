@@ -3,7 +3,7 @@
 ============================================ */
 :root {
   /* Sky Blue Brand */
-  --sky-100: #e0f2fe;
+  --sky-100: #f3c808;
   --sky-200: #bae6fd;
   --sky-300: #7dd3fc;
   --sky-400: #38bdf8;
@@ -54,11 +54,11 @@
   --bg2: #0a1628;
   --surface: #0d1f35;
   --surface2: #0f2540;
-  --border: rgba(56, 189, 248, 0.1);
+  --border: rgba(180, 169, 15, 0.1);
   --border-strong: rgba(56, 189, 248, 0.25);
 
-  --text: #e2f0fd;
-  --text-muted: #94c7e8;
+  --text: #ffffff;
+  --text-muted: #4bbfb5;
   --text-dim: #4a7fa0;
 
   --accent: #38bdf8;
